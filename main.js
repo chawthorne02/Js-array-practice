@@ -15,7 +15,7 @@ var number=function(array){
   //2//
 
   const arr = N => Array.from({length: N}, (_,index) => index)
-
+//.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
   
   //3//
 
@@ -24,7 +24,7 @@ var number=function(array){
     
     return 'o'.repeat(drone.length) + 'x'.repeat(lamps.length-drone.length)
   }
-
+    
   //4//
 
   function getAverage(marks){
@@ -42,38 +42,43 @@ function array(arr) {
 // JS-Array-Exercises
 
 //1//
-
-function array(arr) {
-    let i = 0
-
-    for(let i = 0; i < arr.length; i++) {
-        
+//answer during review;
+function array(str, i) {
+    const result = [];
+    for(let j = 0; j < i; j++){
+        result.push(str);
     }
+    return result
 }
-
+    
 
 
 //2//
 
 function array(arr) {
-    const reversed1 = arr.slice().reverse();
+    const reversed1 = arr.slice().reverse(); //slices entire array and reverses the elements within the array
 
     return reversed1
 }
 
 //3//
 
-function array(arr) {
-    return arr.filter(Boolean)
+function array(arr) { 
+    return arr.filter(Boolean) //filters out elements that are false in the array and brings back array with only  true values
 }
 
 //4//
 
-
-
+function answer1(arr) {
+    const result = {}; // makes an empty object
+    for(let i = 0; i < arr.length; i++){ //for loop to pass through each value in nested array 
+        result[arr[i][0]] = arr[i][1]; // result brings in [name, "charlie"......]
+    }
+    return result
+}
 
 //5//
-
+//Could have used .includes or indexof()
 function array(arr) {
     let newArray = [new Set(arr)];
 
@@ -82,8 +87,8 @@ function array(arr) {
 
 
 //6//
-
-function equal(arr1, arr2) {
+// for loop uncessary. Could have used the not operator to compare the two arrays 
+function equal(arr1, arr2) { 
     let i = 0
 
     for (let i = 0; i < arr1 && arr2; i++) {
@@ -99,7 +104,7 @@ function equal(arr1, arr2) {
 //BONUS//
 
 function array(arr1, arr2) {
-    return arr1.concat(arr2)
+    return arr1.concat(arr2) //used .concat to merge arrays together 
 }
 
 ///////
