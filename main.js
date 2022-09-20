@@ -2,17 +2,26 @@
 
 //1//
 
-var number=function(array){
+var number=function(array){ //could have also used to map to iterate through each element
   
-    let output = []
+    let output = [] //output equals empty array
     
-    for(let i = 0; i < array.length; i++) {
+    for(let i = 0; i < array.length; i++) { 
       output.push((i + 1) + ": " + array[i])
     }
     return output
   }
 
   //2//
+function arr(num){
+     if(num === undefined) // { set num to undefined to return an empty array if it were true
+        return []; // returns an empty array
+    }
+    for(let i = 0; i < num; i++){
+        result.push(i);
+    }
+// } Could use a for loop 
+
 
   const arr = N => Array.from({length: N}, (_,index) => index)
 //.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
@@ -21,7 +30,7 @@ var number=function(array){
 
   function flyBy(lamps, drone){
     if(drone.length > lamps.length) return 'o'.repeat(lamps.length)
-    
+    // if the drone flies more spaces then lamps.length then put 'o' 
     return 'o'.repeat(drone.length) + 'x'.repeat(lamps.length-drone.length)
   }
     
